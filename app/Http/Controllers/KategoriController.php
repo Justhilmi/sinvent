@@ -40,22 +40,11 @@ class KategoriController extends Controller
 
     public function store(Request $request)
     {
-        //cek data
-        // echo "data deskripsi";
-        // echo $request->deskripsi;
-        // die('asd');
-
 
         $request->validate([
             'deskripsi' => 'required',
             'kategori' => 'required',
         ]);
-
-        // Create a new Kategori
-        //Kategori::create([
-        //    'deskripsi' => $request->deskripsi,
-        //    'kategori' => $request->kategori,
-       // ]);
 
         try {
             DB::beginTransaction(); // <= Starting the transaction
