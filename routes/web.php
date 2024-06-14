@@ -19,9 +19,7 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-Route::resource('/products', \App\Http\Controllers\ProductController::class);
 Route::resource('/kategori', \App\Http\Controllers\KategoriController::class);
-Route::resource('/category', \App\Http\Controllers\CategoryController::class);
 Route::resource('/barang', \App\Http\Controllers\BarangController::class);
 Route::resource('barangmasuk', MasukController::class);
 Route::resource('barangkeluar', KeluarController::class);
