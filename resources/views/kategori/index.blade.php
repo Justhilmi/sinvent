@@ -48,7 +48,7 @@
                             @endphp
                             @forelse ($rsetKategori as $rowkategori)
                                 <tr>
-                                    <td>{{ $rowkategori->id }}</td>
+                                    <td>{{ ++$i }}</td>
                                     <td>{{ $rowkategori->deskripsi }}</td>
                                     <td>{{ $kategoriMap[$rowkategori->kategori] ?? $rowkategori->kategori }}</td>
                                     <td class="text-center">
